@@ -127,7 +127,7 @@ A infraestrutura que o Terraform pode gerenciar inclui componentes de baixo nív
 
    - Pelo terminal:
     ```
-    $ git clone [https://github.com/kledsonhugo/terraform-hello-world](https://github.com/kledsonhugo/terraform-hello-world)
+    $ git clone https://github.com/kledsonhugo/terraform-hello-world
     Cloning into 'iac'...
     remote: Enumerating objects: 10, done.
     remote: Counting objects: 100% (10/10), done.
