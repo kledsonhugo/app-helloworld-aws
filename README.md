@@ -124,7 +124,7 @@ A infraestrutura que o Terraform pode gerenciar inclui componentes de baixo nív
 1. Clonar repositório https://github.com/FIAP/iac
 
    - Pelo Visual Studio Code:
-    ![Clone Repository](/hello/images/clone-repository.png)
+    ![Clone Repository](/images/clone-repository.png)
 
    - Pelo terminal:
     ```
