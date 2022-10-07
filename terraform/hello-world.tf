@@ -64,14 +64,6 @@ resource "aws_security_group" "Hello_Security_Group" {
     }
 
     ingress {
-        description = "All from 10.0.0.0/16"
-        from_port   = 0
-        to_port     = 0
-        protocol    = "-1"
-        cidr_blocks = ["10.0.0.0/16"]
-    }
-    
-    ingress {
         description = "TCP/22 from All"
         from_port   = 22
         to_port     = 22
