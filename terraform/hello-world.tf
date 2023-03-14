@@ -85,11 +85,17 @@ resource "aws_security_group" "Hello_Security_Group" {
 }
 
 # EC2 INSTANCE
+
+data "template_file" "user_data" {
+    template = "${file("./scripts/user_data.sh")}"
+}
+
 resource "aws_instance" "hello-instance" {
-    ami                    = "ami-0c02fb55956c7d316"
+    ami                    = "ami-005f9685cb30f234b"
     instance_type          = "t2.micro"
     subnet_id              = aws_subnet.Hello_Public_Subnet.id
     vpc_security_group_ids = [aws_security_group.Hello_Security_Group.id]
+    user_data              = "${base64encode(data.template_file.user_data.rendered)}"
 
     tags = {
         Name = "hello-instance"
