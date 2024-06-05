@@ -1,6 +1,5 @@
 # Terraform Hello World
 
-
 ## Introdução
 
 O [Terraform](https://www.terraform.io/) é uma ferramenta para construir, alterar e controlar a infraestrutura de TI de forma segura e eficiente.
@@ -9,6 +8,9 @@ O Terraform pode gerenciar provedores de serviços existentes e populares como O
 
 A infraestrutura que o Terraform pode gerenciar inclui componentes de baixo nível, como instâncias de computação, armazenamento e redes, bem como componentes de alto nível, como entradas DNS, recursos SaaS, etc.
 
+Infraestrutura usada neste projeto:
+
+![Infraestrutura](./images/app-helloworld-aws.png)
 
 ## Instalar o Terraform CLI (Command Line Interface)
 
@@ -20,7 +22,6 @@ A infraestrutura que o Terraform pode gerenciar inclui componentes de baixo nív
    terraform --version
    ```
 
-
 ## Configurar o acesso do Terraform à uma conta AWS
 
 1. Dentro do diretório *terraform/*, crie o diretório *.aws/*.
@@ -28,20 +29,18 @@ A infraestrutura que o Terraform pode gerenciar inclui componentes de baixo nív
 2. Dentro do diretório *terraform/.aws/*, crie o arquivo *credentials*, inclua o conteúdo de exemplo abaixo e substitua pelas infos da sua conta AWS.
    
    ```
-   [fiap-iac]
+   [iac]
    aws_access_key_id = *********************
    aws_secret_access_key = *********************
-   aws_session_token = *********************
    ```
 
 3. Dentro do diretório *terraform/.aws/*, crie o arquivo *config* e inclua o conteúdo abaixo.
 
    ```
-   [profile fiap-iac]
+   [profile iac]
    region = us-east-1
    output = json
    ```
-
 
 ## Inicializar o Terraform
 
@@ -52,7 +51,6 @@ A infraestrutura que o Terraform pode gerenciar inclui componentes de baixo nív
    ```
 
    - O texto em verde *Terraform has been successfully initialized!* será mostrado indicando que o Terraform inicializou corretamente.
-
 
 ## Criar os recursos de TI na AWS
 
@@ -71,7 +69,7 @@ A infraestrutura que o Terraform pode gerenciar inclui componentes de baixo nív
 3. Crie os recursos de TI na AWS.
 
    ```
-   terraform -chdir=./terraform apply -auto-approve tfplan
+   terraform -chdir=./terraform apply tfplan
    ```
 
 4. Verifique as informações dos recursos de TI criados na AWS.
@@ -80,11 +78,9 @@ A infraestrutura que o Terraform pode gerenciar inclui componentes de baixo nív
    terraform -chdir=./terraform show
    ```
 
-
 ## Validar pelo portal AWS os recursos de TI criados
 
 1. Abra o portal AWS e valide a configuração dos recursos de TI criados (VPC, Internet Gateway, SubRede, Tabela de Roteamento, Security Group e EC2).
-
 
 ## Remover recursos de TI
 
@@ -92,5 +88,9 @@ A infraestrutura que o Terraform pode gerenciar inclui componentes de baixo nív
 
    ```
    terraform -chdir=./terraform plan -destroy -out tfplan
-   terraform -chdir=./terraform apply -auto-approve tfplan
+   terraform -chdir=./terraform apply tfplan
    ```
+
+# Terraform Hello World Hands On
+
+[![Terraform Hello World](http://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](http://www.youtube.com/watch?v=dQw4w9WgXcQ "Tutorial do Projeto")
