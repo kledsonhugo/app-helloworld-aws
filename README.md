@@ -22,6 +22,14 @@ Infraestrutura usada neste projeto:
    terraform --version
    ```
 
+## Clone o repositório que contém o código Terraform
+
+1. Na sua máquina clone o repositório
+
+   ```
+   git clone https://github.com/kledsonhugo/app-helloworld-aws.git
+   ```
+
 ## Configurar o acesso do Terraform à uma conta AWS
 
 1. Dentro do diretório *terraform/*, crie o diretório *.aws/*.
