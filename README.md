@@ -101,4 +101,4 @@ Infraestrutura usada neste projeto:
 
 # Terraform Hello World Vídeo
 
-[![Terraform Hello World](https://www.youtube.com/watch?v=mGRTK2Isp3Y)](https://www.youtube.com/watch?v=mGRTK2Isp3Y "Terraform Hello World")
+[![Terraform Hello World](https://github.com/kledsonhugo/app-helloworld-aws/blob/main/images/terraform-hello-world.png?raw=true)](https://www.youtube.com/watch?v=mGRTK2Isp3Y "Terraform Hello World")
