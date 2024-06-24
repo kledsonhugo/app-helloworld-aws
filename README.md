@@ -99,6 +99,6 @@ Infraestrutura usada neste projeto:
    terraform -chdir=./terraform apply tfplan
    ```
 
-# Terraform Hello World Hands On
+# Terraform Hello World Vídeo
 
-[![Terraform Hello World](http://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](http://www.youtube.com/watch?v=dQw4w9WgXcQ "Tutorial do Projeto")
+[![Terraform Hello World](https://www.youtube.com/watch?v=mGRTK2Isp3Y)](https://www.youtube.com/watch?v=mGRTK2Isp3Y "Terraform Hello World")
