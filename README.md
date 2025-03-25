@@ -52,10 +52,10 @@ Infraestrutura usada neste projeto:
 
 ## Inicializar o Terraform
 
-1. Abra o terminal e execute o comando abaixo.
+1. Abra o terminal, acesse o diretório "terraform" e execute o comando abaixo.
 
    ```
-   terraform -chdir=./terraform init
+   terraform init
    ```
 
    - O texto em verde *Terraform has been successfully initialized!* será mostrado indicando que o Terraform inicializou corretamente.
@@ -65,25 +65,19 @@ Infraestrutura usada neste projeto:
 1. Valide que não existem erros no código Terraform.
 
    ```
-   terraform -chdir=./terraform validate
+   terraform validate
    ```
 
-2. Planeje a criação dos recursos de TI na AWS.
+2. Crie os recursos de TI na AWS.
 
    ```
-   terraform -chdir=./terraform plan -out tfplan
+   terraform apply
    ```
 
-3. Crie os recursos de TI na AWS.
+3. Verifique as informações dos recursos de TI criados na AWS.
 
    ```
-   terraform -chdir=./terraform apply tfplan
-   ```
-
-4. Verifique as informações dos recursos de TI criados na AWS.
-
-   ```
-   terraform -chdir=./terraform show
+   terraform show
    ```
 
 ## Validar pelo portal AWS os recursos de TI criados
@@ -95,8 +89,7 @@ Infraestrutura usada neste projeto:
 1. Destruir os recursos de TI criados na AWS.
 
    ```
-   terraform -chdir=./terraform plan -destroy -out tfplan
-   terraform -chdir=./terraform apply tfplan
+   terraform apply -destroy
    ```
 
 # Terraform Hello World Vídeo
